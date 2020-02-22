@@ -30,7 +30,7 @@
   )
 
 (defn app [conn todo-id]
-  (let [todo @(p/pull conn '[:todo/name] [:todo/name "Eikan Lista"])]
+  (let [todo @(p/pull conn '[:todo/name] [:todo/name "Matt's List"])]
     [:div
      [testdog conn]
      [:h1 (:todo/name todo)]
