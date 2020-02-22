@@ -19,7 +19,7 @@
 
 ;(p/pull conn '[*] [:task/name "Mop Floors"])
 (defn testdog [conn]
-  (let [floors @(p/pull conn '[*] [:task/name "Moppaa lattiat"])]
+  (let [floors @(p/pull conn '[*] [:task/name "Mop Floors"])]
     [:div
      {:on-click
       #(p/transact! conn [[:db/add (:db/id floors) :task/done (not (:task/done floors))]])}
